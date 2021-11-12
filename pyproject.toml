@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "inventory_api"
+version = "0.1.0"
+description = ""
+authors = ["Neelesh Bisht <neeleshbisht99@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.2.9"
+djangorestframework = "^3.12.4"
+python-decouple = "^3.5"
+django-debug-toolbar = "^3.2.2"
+psycopg2-binary = "^2.9.1"
+autopep8 = "^1.6.0"
+PyJWT = "^2.3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
