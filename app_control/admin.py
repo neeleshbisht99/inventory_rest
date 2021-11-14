@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import InventoryGroup, Inventory
+from .models import InventoryGroup, Inventory, Shop
 
-admin.register((Inventory, InventoryGroup, ))
+admin.register((Inventory, InventoryGroup, Shop, ))
