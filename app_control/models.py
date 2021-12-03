@@ -120,7 +120,7 @@ class Shop(models.Model):
 
 class Invoice(models.Model):
     created_by = models.ForeignKey(
-        CustomUser, null=True, on_delete=models.SET_NULL, related_name="shops")
+        CustomUser, null=True, on_delete=models.SET_NULL, related_name="invoices")
     shop = models.ForeignKey(Shop, null=True, on_delete=models.SET_NULL, related_name="sale_shop")
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -145,7 +145,7 @@ class Invoice(models.Model):
 class InvoiceItem(models.Model):
     invoice = models.ForeignKey(
         Invoice, on_delete=models.CASCADE, related_name="invoice_items")
-    items = models.ForeignKey(
+    item = models.ForeignKey(
         Inventory, null=True, on_delete=models.SET_NULL, related_name="inventory_invoices"
     )
     item_name = models.CharField(max_length=255, null=True)
